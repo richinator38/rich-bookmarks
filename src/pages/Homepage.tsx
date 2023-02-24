@@ -1,7 +1,7 @@
-import { Fragment } from 'react';
+import { Fragment } from "react";
 
-import BookmarkContainer from '../components/BookmarkContainer';
-import TitleComponent from '../components/Title';
+import BookmarkContainer from "../components/Bookmark/BookmarkContainer";
+import TitleComponent from "../components/Title";
 
 const Homepage = () => {
   return (

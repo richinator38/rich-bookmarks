@@ -6,7 +6,8 @@ import {
 } from "react-router-dom";
 
 import Homepage from "./pages/Homepage";
-import AddEditBookmark from "./components/AddEditBookmark";
+import AddEditBookmark from "./components/Bookmark/AddEditBookmark";
+import LoginPage from "./pages/Login";
 
 const router = createBrowserRouter([
   {
@@ -15,11 +16,12 @@ const router = createBrowserRouter([
   },
   { path: "/bookmarks", element: <Homepage /> },
   { path: "/bookmarks/:id", element: <AddEditBookmark /> },
+  { path: "/login", element: <LoginPage /> },
 ]);
 
 const App = () => {
   return (
-    <div className="container mx-auto px-4">
+    <div className="px-4">
       <RouterProvider router={router} />
     </div>
   );

@@ -1,6 +1,6 @@
-import { useParams } from 'react-router-dom';
-import { Fragment } from 'react';
-import TitleComponent from './Title';
+import { useParams } from "react-router-dom";
+import { Fragment } from "react";
+import TitleComponent from "../Title";
 
 const AddEditBookmark = () => {
   const params = useParams();
