@@ -1,11 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import { useRef } from "react";
 
 const LoginPage = () => {
   const navigate = useNavigate();
+  const userNameRef = useRef<HTMLInputElement>(null);
+  const passwordRef = useRef<HTMLInputElement>(null);
 
   const handleLogin = (event: any) => {
     event.preventDefault();
 
+    console.log(userNameRef.current?.value, passwordRef.current?.value);
     navigate(`/bookmarks`);
   };
 
@@ -21,11 +25,21 @@ const LoginPage = () => {
         <label htmlFor="username" aria-label="User Name">
           Username
         </label>
-        <input className="rounded-md" type="text" id="username" />
+        <input
+          className="rounded-md"
+          type="text"
+          id="username"
+          ref={userNameRef}
+        />
         <label htmlFor="password" aria-label="password" className="mt-4">
           Password
         </label>
-        <input className="rounded-md" type="password" id="password" />
+        <input
+          className="rounded-md"
+          type="password"
+          id="password"
+          ref={passwordRef}
+        />
         <button
           onClick={handleLogin}
           className="rounded-md border border-black mt-12 p-4 cursor-pointer bg-sky-500/40 hover:bg-sky-500"
