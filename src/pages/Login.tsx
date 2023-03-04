@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import UIButton from "../components/UI/UIButton";
 import UIForm from "../components/UI/UIForm";
+import { isEmpty } from "../validation";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -11,8 +12,6 @@ const LoginPage = () => {
   });
   const userNameRef = useRef<HTMLInputElement>(null);
   const passwordRef = useRef<HTMLInputElement>(null);
-
-  const isEmpty = (value: string | undefined) => value?.trim() === "";
 
   const handleLogin = (event: any) => {
     event.preventDefault();
