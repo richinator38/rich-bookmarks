@@ -1,11 +1,10 @@
 import React from "react";
-import { useSelector } from "react-redux";
 
 import Bookmark from "./Bookmark";
-import { StoreModel } from "../../store/store-model";
+import { useAppSelector } from "../../hooks";
 
 const BookmarkContainer = () => {
-  const bookmarks = useSelector((state: StoreModel) => state?.bookmarks);
+  const bookmarks = useAppSelector((state) => state?.bookmarks);
 
   return (
     <div className="text-center grid sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-2">
